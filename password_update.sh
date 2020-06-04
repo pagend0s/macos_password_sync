@@ -82,7 +82,7 @@ sleep 2
 	 echo 	"${NONE}"
 	 sleep 2
 	else
-	 diskutil apfs changePassphrase "$drive" -user "$user_uid"
+	sudo diskutil apfs changePassphrase "$drive" -user "$user_uid"
 sleep 5
 	clear
 	echo ""
@@ -94,7 +94,7 @@ echo ""
 	sleep 4
 	
 	# PREBOOT UPDATE AFTER PASSWORD CHANGE	
-	diskutil apfs updatePreboot /
+	sudo diskutil apfs updatePreboot /
 	sleep 2
 	clear
 	echo ""
